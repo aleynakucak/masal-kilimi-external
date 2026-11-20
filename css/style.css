@@ -1,0 +1,210 @@
+:root{
+  --zemin:#eeeee6; --kagit:#fbfbf7; --murekkep:#1c2230; --soluk:#4a5163; --cizgi:#cfd1c6;
+  --indigo:#1f2f5c; --nar:#b8322a; --safran:#e3a72f;
+  --vurgu:#1f2f5c; --vurgu-yazi:#ffffff; --yazi:1.15rem;
+  --satir:1.85; --okuyazi:var(--serif); --onemli:#b8322a;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  /* kilim motifleri: kodla çizilmiş basamaklı desenler */
+  --elmas:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' shape-rendering='crispEdges'><rect width='16' height='16' fill='%231f2f5c'/><g fill='%23b8322a'><rect x='6' width='4' height='2'/><rect x='4' y='2' width='8' height='2'/><rect x='2' y='4' width='12' height='2'/><rect y='6' width='16' height='4'/><rect x='2' y='10' width='12' height='2'/><rect x='4' y='12' width='8' height='2'/><rect x='6' y='14' width='4' height='2'/></g><g fill='%23e3a72f'><rect x='6' y='4' width='4' height='8'/><rect x='4' y='6' width='8' height='4'/></g></svg>");
+  --zig:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='16' shape-rendering='crispEdges'><rect width='32' height='16' fill='%23efe8d6'/><g fill='%23b8322a'><rect width='4' height='4'/><rect x='4' y='4' width='4' height='4'/><rect x='8' y='8' width='4' height='4'/><rect x='12' y='12' width='4' height='4'/><rect x='16' y='12' width='4' height='4'/><rect x='20' y='8' width='4' height='4'/><rect x='24' y='4' width='4' height='4'/><rect x='28' width='4' height='4'/></g><g fill='%231f2f5c'><rect x='12' width='4' height='4'/><rect x='16' width='4' height='4'/></g></svg>");
+  --kurt:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' shape-rendering='crispEdges'><rect width='16' height='16' fill='%23b8322a'/><g fill='%23e3a72f'><rect x='6' width='4' height='4'/><rect x='4' y='4' width='8' height='4'/><rect x='2' y='8' width='12' height='4'/><rect y='12' width='16' height='4'/></g><rect x='6' y='8' width='4' height='4' fill='%231f2f5c'/></svg>");
+  --serit:linear-gradient(var(--nar) 0 33%,var(--safran) 33% 66%,var(--indigo) 66%);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --zemin:#12151f; --kagit:#1a1f2e; --murekkep:#ebeaf2; --soluk:#a9aec0; --cizgi:#333a50;
+  --vurgu:#e3a72f; --vurgu-yazi:#12151f; --onemli:#f0b84a;}}
+:root[data-theme="dark"]{
+  --zemin:#12151f; --kagit:#1a1f2e; --murekkep:#ebeaf2; --soluk:#a9aec0; --cizgi:#333a50;
+  --vurgu:#e3a72f; --vurgu-yazi:#12151f; --onemli:#f0b84a;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--murekkep);font-family:var(--sans);line-height:1.5}
+button,a{font:inherit}
+button{color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--safran);outline-offset:2px}
+.btn{display:inline-block;background:var(--kagit);color:var(--murekkep);border:2px solid var(--murekkep);padding:.5rem .9rem;min-height:44px;min-width:44px;border-radius:3px;text-decoration:none}
+.btn:hover,.chip[aria-pressed="true"]{background:var(--vurgu);color:var(--vurgu-yazi);border-color:var(--vurgu)}
+.tema{display:inline-flex;align-items:center;gap:.45rem}
+.tema svg{width:1.15em;height:1.15em;flex:none}
+.sar{max-width:62rem;margin:0 auto;padding:0 1rem}
+.d-elmas{background:var(--elmas) 0 0/16px 16px}
+.d-zig{background:var(--zig) 0 0/32px 16px}
+.d-kurt{background:var(--kurt) 0 0/16px 16px}
+
+/* üst kilim panosu */
+.band{height:32px;background:var(--elmas) 0 0/32px 32px}
+.band.alt{background:var(--zig) 0 0/64px 32px}
+.serit{height:12px;background:var(--serit)}
+.pano{background:var(--indigo);padding:3.8rem 1rem 2rem;position:relative}
+.kartus{max-width:36rem;margin:0 auto;text-align:center;background:#f7f2e4;color:#1c2230;border:3px solid var(--safran);outline:3px solid #f7f2e4;outline-offset:-9px;padding:1.6rem 1.2rem}
+.kartus h1{font-family:var(--serif);font-size:clamp(2.3rem,8vw,3.8rem);margin:0;line-height:1.05;letter-spacing:.01em}
+.kartus p{margin:.6rem 0 0;color:#4a5163}
+.pano .tema{position:absolute;top:.6rem;right:.6rem;min-height:40px;padding:.3rem .7rem;font-size:.9rem}
+
+.araclar{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+#ara{flex:1 1 14rem;min-height:44px;padding:.5rem .8rem;border:2px solid var(--murekkep);background:var(--kagit);color:var(--murekkep);font:inherit;border-radius:3px}
+#sayac{margin:1rem 0;color:var(--soluk)}
+#izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:1.2rem;padding:0;margin:0 0 3rem;list-style:none}
+.kart{display:flex;flex-direction:column;height:100%;background:var(--kagit);border:2px solid var(--murekkep);color:inherit;text-decoration:none}
+.kart:hover{border-color:var(--nar);box-shadow:5px 5px 0 var(--nar)}
+/* masal görseli (okuma ekranı) */
+.resim{margin-top:1rem;margin-bottom:1.6rem}
+.resim img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border:2px solid var(--murekkep);border-radius:3px}
+.kart .desen{height:16px;flex:none}
+.kart .kapak{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-bottom:2px solid var(--murekkep)}
+.kart .govde{padding:1rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.kart h2{font-family:var(--serif);font-size:1.3rem;line-height:1.25;margin:0}
+.kart p{margin:0}
+.kart .ozet{color:var(--soluk)}
+.kart .bilgi{margin-top:auto;padding-top:.7rem;border-top:2px solid var(--cizgi);font-size:.9rem;color:var(--soluk)}
+.kart .bilgi span{display:block}
+#bos{font-family:var(--serif);font-size:1.2rem;margin:1rem 0 3rem}
+
+/* okuma ekranı: desen sadece kenarda, metnin çevresi sade */
+#ilerleme{position:fixed;top:0;left:0;height:6px;width:0;background:var(--nar);z-index:20}
+.okuma-bar{position:sticky;top:0;z-index:10;background:var(--zemin);border-bottom:2px solid var(--murekkep);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;padding:.6rem 1rem}
+.okuma-bar .bosluk{flex:1}
+.boy{min-width:3.2rem;text-align:center;color:var(--soluk)}
+.sayfa{background:var(--kagit);padding:2.2rem clamp(1.5rem,6vw,2.5rem) 2rem}
+.sayfa>*,.kenar{max-width:36rem;margin-left:auto;margin-right:auto}
+.sayfa h1{font-family:var(--serif);font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.15;margin:0 auto .5rem}
+.meta{margin:0 auto 1.6rem;color:var(--soluk);font-size:.95rem}
+article{font-family:var(--okuyazi);font-size:var(--yazi);line-height:var(--satir)}
+article p{margin:0 0 1.1em}
+article .giris{font-style:italic;color:var(--soluk);border-left:6px solid var(--safran);padding-left:1rem;margin-bottom:1.6rem}
+.not{font-family:var(--sans);font-size:.95rem;border:2px dashed var(--cizgi);padding:.8rem 1rem}
+.kenar{padding:1.4rem clamp(1.5rem,6vw,2.5rem) 0}
+.kaynak{font-size:.85rem;color:var(--soluk);margin:0 0 1.2rem;overflow-wrap:anywhere}
+.gecis{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap}
+
+/* okuma ayarları paneli: çubuğun içinde, açılıp kapanır */
+#ayarlar{flex-basis:100%;display:grid;gap:.6rem;padding-top:.7rem;margin-top:.2rem;border-top:2px solid var(--cizgi);max-height:55vh;overflow:auto}
+.satirayar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+.satirayar>.etiket{min-width:7.5rem;color:var(--soluk)}
+/* süslü baş harf: ilk harf, basamaklı bir kilim elmasının içinde (SVG arka plan) */
+article .ilk{display:flow-root}
+article .ilk .bas{float:left;display:grid;place-items:center;width:3.4rem;height:3.4rem;margin:.1rem .8rem .2rem 0;shape-outside:polygon(50% 0,100% 50%,50% 100%,0 50%);shape-margin:.3rem;
+  font-family:var(--serif);font-weight:700;font-size:1.7rem;line-height:1;color:#f7f2e4;background:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'><path fill='%23e3a72f' d='M7 0h2v1h-2zM6 1h4v1h-4zM5 2h6v1h-6zM4 3h8v1h-8zM3 4h10v1h-10zM2 5h12v1h-12zM1 6h14v1h-14zM0 7h16v1h-16zM0 8h16v1h-16zM1 9h14v1h-14zM2 10h12v1h-12zM3 11h10v1h-10zM4 12h8v1h-8zM5 13h6v1h-6zM6 14h4v1h-4zM7 15h2v1h-2z'/><path fill='%23b8322a' d='M7 1h2v1h-2zM6 2h4v1h-4zM5 3h6v1h-6zM4 4h8v1h-8zM3 5h10v1h-10zM2 6h12v1h-12zM1 7h14v1h-14zM1 8h14v1h-14zM2 9h12v1h-12zM3 10h10v1h-10zM4 11h8v1h-8zM5 12h6v1h-6zM6 13h4v1h-4zM7 14h2v1h-2z'/><path fill='%231f2f5c' d='M7 3h2v1h-2zM6 4h4v1h-4zM5 5h6v1h-6zM4 6h8v1h-8zM3 7h10v1h-10zM3 8h10v1h-10zM4 9h8v1h-8zM5 10h6v1h-6zM6 11h4v1h-4zM7 12h2v1h-2z'/></svg>") center/100% 100% no-repeat}
+/* süslü baş harf kapatılınca ilk harf sıradan harf olur */
+#metin.basiz .ilk .bas{float:none;display:inline;width:auto;height:auto;margin:0;shape-outside:none;font:inherit;color:inherit;background:none}
+/* diyalog: konuşma satırı biraz içeriden başlar */
+article .diyalog{margin-left:1.8rem}
+/* önemli cümle: farklı renk, kalın ve altı çizgili (renge ek olarak biçim farkı) */
+mark.onemli{background:transparent;color:var(--onemli);font-weight:700;border-bottom:2px solid var(--safran)}
+#metin.vurgusuz mark.onemli{color:inherit;font-weight:inherit;border-bottom:0}
+/* masal sonu: kilim şeridi ve üç elma */
+.son{margin-top:2rem;text-align:center}
+.son .desen{height:16px;margin-bottom:1rem}
+.son .elmalar{display:flex;justify-content:center;gap:.6rem;color:var(--onemli)}
+.son .elmalar svg{width:1.7rem;height:1.7rem}
+.son p{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--soluk);margin:.6rem 0 0}
+.rozet{display:inline-flex;align-items:center;gap:.35rem;font-weight:700;color:var(--onemli)}
+.kart .bilgi .rozet{display:flex}
+.rozet svg{width:1em;height:1em}
+.devam{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;padding-top:.6rem;border-top:2px solid var(--cizgi)}
+.devam .btn{min-height:40px;padding:.3rem .7rem}
+.ipucu{font-size:.85rem;color:var(--soluk);margin:1rem 0 0}
+/* menü, bilgi sayfaları ve öneri formu */
+.menu{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem;margin-top:1.3rem}
+.menu .btn{min-height:40px;padding:.3rem .9rem}
+.pano .btn:hover{background:var(--safran);color:#1c2230;border-color:var(--safran)}   /* mavi zeminde üzerine gelince kaybolmasın */
+.sayfa h2{font-family:var(--serif);font-size:1.4rem;margin:1.8rem auto .5rem}
+.icerik p{font-family:var(--serif);font-size:var(--yazi);line-height:var(--satir);margin-top:0;margin-bottom:1.1em}
+.icerik p.kucuk{font-family:var(--sans);font-size:.9rem;line-height:1.6;color:var(--soluk)}
+.icerik label{display:block;margin:1rem auto .3rem;font-weight:600}
+.icerik input,.icerik textarea{display:block;width:100%;padding:.6rem .8rem;border:2px solid var(--murekkep);background:var(--kagit);color:var(--murekkep);font:inherit;border-radius:3px}
+.icerik .dugmeler{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.icerik a{color:var(--vurgu);font-weight:600}
+#oMesaj{min-height:1.5em;margin-top:.8rem;color:var(--onemli);font-weight:600}
+/* altlık: üstteki kilim başlığın aynası */
+.alt-pano{background:var(--indigo);color:#f7f2e4;text-align:center;padding:2rem 1rem}
+.alt-pano p{margin:.3rem 0}
+.alt-pano .alt-ad{font-family:var(--serif);font-size:1.6rem;font-weight:700}
+.alt-menu{display:flex;justify-content:center;gap:1.4rem;margin:1rem 0}
+.alt-menu a{color:var(--safran);font-weight:600;padding:.5rem .2rem}
+.alt-pano .telif{font-size:.9rem;color:#d8d4c4;margin-top:1rem}
+footer{margin-top:3rem}
+/* kart özetleri türün rengiyle: güldürücü masallar nar kırmızısı, olağanüstü indigo, öğüt ve ibret koyu safran */
+:root{--t-hile:#a82d1f;--t-olag:#1f2f5c;--t-ogut:#7a4f00}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--t-hile:#f08a7c;--t-olag:#9db4ee;--t-ogut:#e3a72f}}
+:root[data-theme="dark"]{--t-hile:#f08a7c;--t-olag:#9db4ee;--t-ogut:#e3a72f}
+.kart[data-tur="hile"]{--tur:var(--t-hile)}
+.kart[data-tur="olag"]{--tur:var(--t-olag)}
+.kart[data-tur="ogut"]{--tur:var(--t-ogut)}
+.bugun[data-tur="hile"]{--tur:var(--t-hile)}
+.bugun[data-tur="olag"]{--tur:var(--t-olag)}
+.bugun[data-tur="ogut"]{--tur:var(--t-ogut)}
+/* bugünün masalı: görsel solda, yazı sağda; dar ekranda alt alta */
+.bugun-ust{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.2rem 1rem;margin:1.2rem 0 .5rem}
+.bugun-ust h2{font-family:var(--serif);font-size:1.25rem;margin:0}
+.bugun-ust p{margin:0;color:var(--soluk)}
+.bugun{display:grid;grid-template-columns:13rem minmax(0,1fr);background:var(--kagit);border:2px solid var(--murekkep)}
+.bugun .desen{grid-column:1/-1;height:16px}
+.bugun .gorsel{position:relative;display:block;min-height:8.5rem;background:var(--zemin)}
+.bugun .gorsel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bugun .b-govde{padding:.8rem 1.1rem 1rem;display:flex;flex-direction:column;gap:.4rem}
+.bugun h3{font-family:var(--serif);font-size:clamp(1.3rem,3.5vw,1.7rem);line-height:1.15;margin:0}
+.bugun .ozet{margin:0;font-size:.95rem;color:var(--tur,var(--soluk));font-weight:500;border-left:4px solid var(--tur,var(--cizgi));padding-left:.7rem}
+.bugun .bilgi{font-size:.9rem;color:var(--soluk)}
+.bugun .bilgi{display:flex;flex-wrap:wrap;gap:0 1rem}
+.bugun .bilgi span{display:inline}
+.bugun .birincil{align-self:flex-start;margin-top:.2rem;min-height:40px;padding:.35rem 1rem;background:var(--vurgu);color:var(--vurgu-yazi);border-color:var(--vurgu);text-decoration:none}
+@media (max-width:560px){.bugun{grid-template-columns:1fr}.bugun .gorsel{min-height:0;height:7rem}}
+.sure-etiket{align-self:center;color:var(--soluk);font-weight:600}
+.kart .ozet{color:var(--tur,var(--soluk));font-weight:500;border-left:4px solid var(--tur,var(--cizgi));padding-left:.7rem}
+[hidden]{display:none!important}
+
+/* iPhone dosya önizlemeleri JavaScript çalıştırmayabilir.
+   İlk HTML'deki statik içerik bu durumda görünür; uygulama başarılı açıldığında kaldırılır. */
+html.js-hazir #sabit-masallar, html.js-hazir .sabit-bilgi { display:none !important; }
+html:not(.js-hazir) .tema, html:not(.js-hazir) #liste .araclar { display:none !important; }
+.sabit-bilgi{padding:.75rem 1rem;margin:1rem 0;background:var(--kagit);border-left:4px solid var(--safran);color:var(--soluk);font-size:.95rem}
+#sabit-masallar{border-top:3px solid var(--safran);margin:2.2rem 0;padding:1.3rem 0 0}
+#sabit-masallar>h2{font-family:var(--serif);font-size:1.55rem;margin:0 0 .4rem}
+.sabit-aciklama{color:var(--soluk);font-size:.94rem;margin:0 0 2rem}
+.sabit-masal{font-size:1rem;line-height:1.75;font-family:var(--serif);background:var(--kagit);border:2px solid var(--murekkep);margin:0 0 2rem;scroll-margin-top:14px}
+.sabit-masal .desen{height:16px}
+.sabit-sayfa{padding:clamp(1rem,4vw,2.3rem)}
+.sabit-sayfa>h3{font-size:clamp(1.55rem,5vw,2.1rem);line-height:1.2;margin:0 0 .5rem}
+.tur-notu{margin-top:-1rem;font-style:italic}
+.sabit-meta{color:var(--soluk);font-size:.9rem;margin:0 0 1.4rem;font-family:var(--sans)}
+.sabit-ozet{color:var(--soluk);font-style:italic;border-left:5px solid var(--safran);padding-left:.8rem}
+.sabit-metin{max-width:39rem;margin:1.6rem auto}
+.sabit-metin p{margin:0 0 1.1em;overflow-wrap:break-word}
+.sabit-kaynak{font-family:var(--sans);font-size:.84rem;color:var(--soluk);overflow-wrap:anywhere;margin-top:2rem}
+.sabit-kaynak a{color:var(--vurgu)}
+html:not(.js-hazir) #hakkimizda:target,
+html:not(.js-hazir) #iletisim:target {display:block !important;}
+
+/* iPhone'un HTML önizlemesinde JavaScript yoksa masallar başlangıçta kapalı kalır.
+   Bir karta basınca yalnızca #hedef olan masal görünür (Safari :target desteği). */
+html:not(.js-hazir) #sabit-masallar .sabit-masal { display:none; }
+html:not(.js-hazir) #sabit-masallar .sabit-masal:target { display:block; }
+html:not(.js-hazir) #sabit-masallar { border:0; margin:0; padding:0; }
+html:not(.js-hazir) #sabit-masallar > h2,
+html:not(.js-hazir) #sabit-masallar > .sabit-aciklama { display:none; }
+html:not(.js-hazir) #sabit-masallar .sabit-masal:target { scroll-margin-top:0; margin:0 0 1.5rem; }
+.sabit-geri { display:inline-block; margin-bottom:1.4rem; }
+
+/* Günün masalındaki yalnızca buton değil, tüm yüzey tıklanabilsin. */
+#bugun { position:relative; }
+#bugun .butun-bugun-tik { position:absolute; inset:0; z-index:1; }
+#bugun .gorsel, #bugun .birincil { z-index:2; position:relative; }
+#bugun .gorsel { position:relative; }
+#bugun .gorsel img { position:absolute; }
+#bugun .birincil { cursor:pointer; }
+
+/* Modern iPhone Safari'de hedef masal seçilince liste yerine yalnız okuma ekranı. 
+   Eski Safari'de de :target kuralı sayesinde diğer metinler kapalı kalır. */
+@supports selector(html:has(.sabit-masal:target)) {
+  html:not(.js-hazir):has(.sabit-masal:target) #liste > header,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste .bugun-ust,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste #bugun,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste .sabit-bilgi,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste .araclar,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste #sayac,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste #izgara,
+  html:not(.js-hazir):has(.sabit-masal:target) #liste #bos { display:none !important; }
+  html:not(.js-hazir):has(.sabit-masal:target) #liste main.sar { padding-top:1rem; }
+}
+
